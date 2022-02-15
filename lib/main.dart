@@ -6,13 +6,14 @@ void main() {
         appBar: AppBar(
           title: Text(
               "Привет 4 курс",
-              style: TextStyle(fontSize: 30)
+              style: TextStyle(fontSize: 30),
           ),
         ),
-          body: Center(
+          body: Align(
+            alignment: Alignment(0,1),
               child: Text('Пожилой текст',
-              style: TextStyle(fontSize: 33,
-              fontWeight: FontWeight.bold, color: Colors.green),)
-          ),
+                style: TextStyle(fontSize: 36,
+                    fontWeight: FontWeight.bold, color: Colors.green),)
+          )
       )));
 }
