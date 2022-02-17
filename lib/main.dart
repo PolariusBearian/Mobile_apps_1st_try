@@ -6,46 +6,36 @@ void main() {
     appBar: AppBar(
       title: Text(
         "Привет 4 курс",
-        style: TextStyle(fontSize: 30),
+        style: TextStyle(fontSize: 30, fontFamily: 'Roboto'),
       ),
+
     ),
-    body: Container(
-        decoration: BoxDecoration(
-            color: Colors.red,
-            //border: Border.all(width: 4),
-            borderRadius: BorderRadius.all(Radius.circular(9))),
-        //width: 250,
-        height: 170,
-        padding: EdgeInsets.all(20),
-        margin: EdgeInsets.all(15),
-        alignment: Alignment.center,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const <Widget>[
-            Icon(
-              Icons.adjust,
-              size: 150,
-              color: Colors.orange,
-            ),
-            Icon(
-              Icons.adjust,
-              size: 50,
-              color: Colors.orange,
-            ),
-            Icon(
-              Icons.adjust,
-              size: 50,
-              color: Colors.orange,
-            ),
+    body: Stack(
+      alignment: Alignment.center,
+      children: [
+        Icon(
+          Icons.airplay,
+          color: Colors.redAccent,
+          size: 200,
+        ),
+        Icon(
+          Icons.dangerous,
+          color: Colors.blue,
+          size: 150,
+        ),
 
-            Icon(
-              Icons.adjust,
-              size: 50,
-              color: Colors.orange,
-            ),
-          ],
-        )),
-
+        Image(
+          image: AssetImage("assets/images/cat.jpg"),
+          width: 400,
+          height: 400,
+        ),
+        Positioned(
+          top: 250,
+             child: Text(
+              "Котябра Папича",
+              style: TextStyle(fontSize: 30, fontFamily: 'Roboto',color: Colors.amber),
+            )),
+      ],
+    ),
   )));
 }
