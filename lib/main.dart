@@ -38,7 +38,7 @@ class _MyButtonState extends State<MyButton> {
   Widget build(BuildContext context) {
     return ElevatedButton(
         child: Text(
-          value <= 20 ? "Значение: $value" : "Больше 20",
+          "Значение: $value",
           style: TextStyle(fontSize: fontSize, color: buttonFontColor),
         ),
         style: ButtonStyle(
@@ -46,7 +46,7 @@ class _MyButtonState extends State<MyButton> {
         ),
         onPressed: () {
           setState(() {
-            value = value + 1;
+            value += 5;
             if (value > 10) {
               fontSize = 50;
             }
